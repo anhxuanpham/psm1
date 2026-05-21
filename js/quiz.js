@@ -157,7 +157,7 @@
     document.getElementById('quizPercent').textContent = `${pct}%`;
     document.getElementById('quizVerdict').textContent = pass ? '🎉 Đạt! PASS' : '📚 Chưa đạt — cần ôn thêm';
     document.getElementById('quizVerdict').style.color = pass ? 'var(--good)' : 'var(--warn)';
-    document.getElementById('quizSummary').textContent = `${score}/${total} câu đúng · ${total - score} câu sai · Cần ≥ 85% để pass PSPO I`;
+    document.getElementById('quizSummary').textContent = `${score}/${total} câu đúng · ${total - score} câu sai · Cần ≥ 85% để pass PSM I`;
 
     document.getElementById('quizReviewList').classList.add('hidden');
   }
