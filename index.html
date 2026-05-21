@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PSM I — Ôn tập Professional Scrum Master</title>
+<meta name="description" content="Trang ôn tập kiến thức PSM I theo Scrum Guide 2020 — lý thuyết, glossary, flashcards và quiz tương tác cho Scrum Master." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="#home">
+      <span class="brand__logo">SM</span>
+      <span class="brand__text">PSM I Study</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav__link active">Trang chủ</a>
+      <a href="#theory" class="nav__link">Học thuyết</a>
+      <a href="#team" class="nav__link">Scrum Team</a>
+      <a href="#events" class="nav__link">Sự kiện</a>
+      <a href="#artifacts" class="nav__link">Tạo phẩm</a>
+      <a href="#sm" class="nav__link">Scrum Master</a>
+      <a href="#tips" class="nav__link">Exam Tips</a>
+      <a href="#glossary" class="nav__link">Glossary</a>
+      <a href="#flashcards" class="nav__link">Flashcards</a>
+      <a href="#quiz" class="nav__link nav__link--cta">Quiz</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <span class="badge">Scrum Guide 2020 · PSM I</span>
+        <h1>Ôn tập <span class="grad">PSM I</span> hiệu quả, có hệ thống</h1>
+        <p class="lead">
+          Tổng hợp đầy đủ kiến thức Professional Scrum Master I theo Scrum Guide 2020:
+          lý thuyết, vai trò SM, glossary, flashcards và <b>120+ câu quiz tương tác</b> kèm giải thích.
+        </p>
+        <div class="hero__cta">
+          <a href="#quiz" class="btn btn--primary">Bắt đầu Quiz →</a>
+          <a href="#theory" class="btn btn--ghost">Đọc lý thuyết</a>
+        </div>
+        <div class="hero__stats">
+          <div><b>60'</b><span>Thời gian thi</span></div>
+          <div><b>80</b><span>Câu hỏi</span></div>
+          <div><b>85%</b><span>Điểm đạt</span></div>
+          <div><b>$200</b><span>Lệ phí thi</span></div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div class="card-pillars">
+          <h3>3 Trụ cột thực nghiệm</h3>
+          <div class="pillar"><span>1</span><div><b>Transparency</b><p>Sự minh bạch</p></div></div>
+          <div class="pillar"><span>2</span><div><b>Inspection</b><p>Sự kiểm tra</p></div></div>
+          <div class="pillar"><span>3</span><div><b>Adaptation</b><p>Sự thích ứng</p></div></div>
+          <hr/>
+          <h4>5 Giá trị Scrum (F-O-R-C-C)</h4>
+          <div class="values">
+            <span>Focus</span><span>Openness</span><span>Respect</span><span>Commitment</span><span>Courage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEORY -->
+  <section id="theory" class="section">
+    <div class="container">
+      <h2 class="section__title">Học thuyết Scrum</h2>
+      <p class="section__sub">Scrum dựa trên <b>empirical process control</b> (empiricism) và <b>lean thinking</b>. Scrum là <b>framework</b>, không phải methodology/process.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>🔍 Transparency<small>Sự minh bạch</small></h3>
+          <p>Significant aspects của process phải visible với những người chịu trách nhiệm về outcome. Là tiền đề của Inspection — không minh bạch thì kiểm tra sẽ sai.</p>
+        </div>
+        <div class="card">
+          <h3>🧪 Inspection<small>Sự kiểm tra</small></h3>
+          <p>Artifacts và tiến độ phải được kiểm tra thường xuyên để phát hiện variances. Scrum có <b>5 events</b> như feedback loops. Là tiền đề của Adaptation.</p>
+        </div>
+        <div class="card">
+          <h3>🔄 Adaptation<small>Sự thích ứng</small></h3>
+          <p>Khi process lệch khỏi giới hạn, phải điều chỉnh càng sớm càng tốt. Khó thực hiện khi thiếu self-management và empowerment.</p>
+        </div>
+      </div>
+
+      <h3 class="h3-mt">5 Giá trị Scrum (F-O-R-C-C)</h3>
+      <div class="grid-5">
+        <div class="value-card"><b>Focus</b><span>Tập trung</span></div>
+        <div class="value-card"><b>Openness</b><span>Cởi mở</span></div>
+        <div class="value-card"><b>Respect</b><span>Tôn trọng</span></div>
+        <div class="value-card"><b>Commitment</b><span>Cam kết</span></div>
+        <div class="value-card"><b>Courage</b><span>Can đảm</span></div>
+      </div>
+
+      <h3 class="h3-mt">Scrum Team được thiết kế để tối ưu (F-C-P)</h3>
+      <div class="grid-3">
+        <div class="value-card"><b>Flexibility</b><span>Linh hoạt</span></div>
+        <div class="value-card"><b>Creativity</b><span>Sáng tạo</span></div>
+        <div class="value-card"><b>Productivity</b><span>Năng suất</span></div>
+      </div>
+
+      <div class="callout">
+        <b>💡 Ghi nhớ:</b> Khi 5 giá trị được thể hiện → 3 trụ cột <i>come to life</i> và <i>build trust</i>. Scrum artifacts: P-S-I (Product Backlog, Sprint Backlog, Increment). Scrum pillars: T-I-A.
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Scrum Team</h2>
+      <p class="section__sub">3 accountabilities: PO + SM + Developers. <b>10 người hoặc ít hơn</b>. Không sub-teams, không hierarchies, không titles. Self-managing + Cross-functional.</p>
+
+      <div class="grid-3">
+        <div class="role-card role-card--po">
+          <div class="role-card__head">👑 <b>Product Owner</b></div>
+          <p class="role-card__purpose"><i>Tối đa hoá giá trị</i> sản phẩm.</p>
+          <ul>
+            <li><b>1 người</b>, never a committee/PMO</li>
+            <li>Quản lý Product Backlog (ordering, visibility, understanding)</li>
+            <li>Có quyền <b>huỷ Sprint</b> (chỉ PO)</li>
+            <li>Quyết định khi nào release</li>
+            <li>Có thể delegate nhưng vẫn <b>accountable</b></li>
+            <li>Đo performance: customer satisfaction, revenue — KHÔNG phải velocity</li>
+          </ul>
+        </div>
+
+        <div class="role-card role-card--sm">
+          <div class="role-card__head">🧭 <b>Scrum Master</b></div>
+          <p class="role-card__purpose">Triển khai Scrum, đảm bảo <i>hiệu quả</i> của Team.</p>
+          <ul>
+            <li><b>True leader who serves</b> (servant-leadership)</li>
+            <li>Manage the <b>process</b>, not people</li>
+            <li>Promote & support Scrum adoption</li>
+            <li>Remove impediments</li>
+            <li>Ensure events đúng timebox</li>
+            <li>Increase transparency of artifacts</li>
+            <li>1 SM có thể manage <b>multiple teams</b></li>
+          </ul>
+        </div>
+
+        <div class="role-card role-card--dev">
+          <div class="role-card__head">🛠 <b>Developers</b></div>
+          <p class="role-card__purpose">Tạo ra <b>Increment khả dụng</b> mỗi Sprint.</p>
+          <ul>
+            <li>Self-organizing: không ai chỉ cách làm</li>
+            <li>Cross-functional: có đủ skills</li>
+            <li>Quản lý Sprint Backlog</li>
+            <li>Estimate effort/size</li>
+            <li>Đo Sprint performance</li>
+            <li>Quyết định technical approach</li>
+            <li><b>Không có titles</b> — tất cả là "Developers"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <b>⚠️ Scaled Scrum:</b> n teams → 1 Product Backlog, 1 PO, n Sprint Backlogs, 1 integrated Increment, n SM (có thể ít người hơn n). DoD phải compatible với nhau.
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="section">
+    <div class="container">
+      <h2 class="section__title">Các sự kiện Scrum</h2>
+      <p class="section__sub">Sprint là <b>container</b>. Mỗi event là <b>feedback loop</b> (formal opportunity to inspect & adapt). Không có Sprint Zero, Hardening Sprint, Release Sprint.</p>
+
+      <div class="timeline">
+        <div class="event-card">
+          <div class="event-card__time">≤ 1 tháng (fixed)</div>
+          <h3>🏃 Sprint</h3>
+          <p>Nhịp tim Scrum. Duration <b>fixed, không thể rút ngắn/kéo dài</b> khi đã bắt đầu. Sprint mới bắt đầu <b>ngay sau</b> Sprint trước (no gaps).</p>
+          <ul>
+            <li>Sprint Goal can't be changed (trừ khi PO cancel Sprint)</li>
+            <li>Scope có thể re-negotiate với PO</li>
+            <li>Quality goals không giảm</li>
+          </ul>
+          <p class="event-card__who"><b>Cancel Sprint:</b> Chỉ PO. Incomplete PBIs → re-estimate → về Product Backlog.</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__time">≤ 8 giờ</div>
+          <h3>📅 Sprint Planning</h3>
+          <p><b>Toàn bộ Scrum Team</b> + có thể mời stakeholders.</p>
+          <ul>
+            <li><b>Why</b> — Sprint Goal (cả Scrum Team craft)</li>
+            <li><b>What</b> — Developers forecast PBIs</li>
+            <li><b>How</b> — Plan work items ≤ 1 ngày</li>
+          </ul>
+          <p>Input: Product Backlog (prioritized), latest Increment, projected capacity, past performance.</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__time">15 phút</div>
+          <h3>☀️ Daily Scrum</h3>
+          <p>Sự kiện <b>cho Developers</b>. Cùng giờ, cùng địa điểm. Developers <b>participate</b> (talk); others <b>attend</b> (watch only).</p>
+          <p><b>Lưu ý:</b> PO <i>can attend</i> nhưng <i>cannot participate</i> (trừ khi đang làm Sprint Backlog item).</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__time">≤ 4 giờ</div>
+          <h3>🎯 Sprint Review</h3>
+          <p>Informal meeting. Scrum Team + <b>stakeholders</b> collaborate. Là buổi <b>làm việc</b>.</p>
+          <p>Output: Inspected Increment + Revised Product Backlog cho Sprint tiếp.</p>
+          <p><b>2 events có stakeholders:</b> Sprint Review + Sprint Planning.</p>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__time">≤ 3 giờ</div>
+          <h3>🔁 Sprint Retrospective</h3>
+          <p><b>Kết thúc Sprint.</b> Inspect: people, relationships, process, tools. Create improvement plan. Improvements có thể vào Sprint Backlog kế tiếp.</p>
+          <p>Toàn bộ Scrum Team tham gia (PO cũng tham gia as Scrum Team member).</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <b>⏱ Timebox (Sprint 1 tháng):</b> Planning ≤ 8h · Daily 15' · Review ≤ 4h · Retro ≤ 3h. Sprint ngắn hơn → events ngắn hơn.
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIFACTS -->
+  <section id="artifacts" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Tạo phẩm Scrum (P-S-I) & Commitments</h2>
+      <p class="section__sub">3 artifacts + 3 commitments. Tạo phẩm có transparency thấp → quyết định sai → giảm value, tăng risk.</p>
+
+      <div class="grid-3">
+        <div class="art-card">
+          <div class="art-card__head">📋 Product Backlog</div>
+          <p>Owned & managed by <b>PO</b>. Never complete, dynamic, emergent. Single source of work. Attributes: description, order, estimate, value.</p>
+          <p><b>Refinement:</b> ongoing activity, ≤ 10% capacity Developers. Top items nhỏ & rõ, bottom items lớn & mờ.</p>
+          <div class="commit"><b>Commitment:</b> 🎯 <b>Product Goal</b> — future state of product, long-term objective. Hoàn thành/từ bỏ trước khi chọn mục tiêu mới.</div>
+        </div>
+        <div class="art-card">
+          <div class="art-card__head">📝 Sprint Backlog</div>
+          <p>Owned & managed by <b>Developers</b>. = Sprint Goal (why) + PBIs (what) + Plan (how). Cập nhật throughout Sprint. Items deemed unnecessary → removed.</p>
+          <div class="commit"><b>Commitment:</b> 🎯 <b>Sprint Goal</b> — mục tiêu duy nhất. Cả Scrum Team craft tại Sprint Planning. CANNOT change during Sprint.</div>
+        </div>
+        <div class="art-card">
+          <div class="art-card__head">📦 Increment</div>
+          <p>Potentially releasable. Phải usable. Nhiều Increments/Sprint. Chỉ Developers tạo Increment. Có thể release bất kỳ lúc nào.</p>
+          <div class="commit"><b>Commitment:</b> 🎯 <b>Definition of Done</b> — shared understanding. Tăng transparency. Giúp Developers forecast. Có thể improve (tại Retro), nhưng KHÔNG đổi giữa Sprint.</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <b>💡 DoD quan trọng:</b> DoD do Scrum Team tạo (nếu org không có standard). Multiple teams cùng product → DoD phải compatible. PBI không đạt DoD → không release, quay về PB.
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRUM MASTER FOCUS -->
+  <section id="sm" class="section">
+    <div class="container">
+      <h2 class="section__title">Trọng tâm Scrum Master</h2>
+      <p class="section__sub">Phần kiến thức mở rộng quan trọng cho kỳ thi PSM I.</p>
+
+      <div class="po-grid">
+        <div class="po-card">
+          <h3>🧭 SM serves Scrum Team</h3>
+          <ul>
+            <li>Coaching self-management & cross-functionality</li>
+            <li>Helping focus on high-value Increments meeting DoD</li>
+            <li>Causing removal of <b>impediments</b></li>
+            <li>Ensuring events take place, positive, productive, within timebox</li>
+          </ul>
+        </div>
+
+        <div class="po-card">
+          <h3>👑 SM serves Product Owner</h3>
+          <ul>
+            <li>Finding techniques for effective PB management</li>
+            <li>Helping Team understand clear & concise PBIs</li>
+            <li>Helping establish <b>empirical product planning</b></li>
+            <li>Facilitating stakeholder collaboration</li>
+            <li>Ensuring PO knows how to arrange PB to maximize value</li>
+          </ul>
+        </div>
+
+        <div class="po-card">
+          <h3>🏢 SM serves Organization</h3>
+          <ul>
+            <li>Leading, training, coaching Scrum adoption</li>
+            <li>Planning & advising Scrum implementations</li>
+            <li>Helping understand empirical approach for complex work</li>
+            <li>Removing barriers between stakeholders & Scrum Teams</li>
+          </ul>
+        </div>
+
+        <div class="po-card">
+          <h3>🔍 SM detects incomplete transparency</h3>
+          <ul>
+            <li>Inspecting artifacts</li>
+            <li>Sensing patterns</li>
+            <li>Listening closely to what is being said</li>
+            <li>Detecting differences between <b>expected vs real results</b></li>
+          </ul>
+          <p>SM copes with incomplete transparency via: <b>learning, convincing, change</b>.</p>
+        </div>
+
+        <div class="po-card">
+          <h3>🚫 SM KHÔNG làm gì?</h3>
+          <ul>
+            <li>Không manage people (manage <b>process</b>)</li>
+            <li>Không assign tasks cho Developers</li>
+            <li>Không prescribe solutions — coach/facilitate</li>
+            <li>Không đồng ý/không đồng ý opinions</li>
+            <li>Scenario answer: <b>coaching, mentoring, teaching, facilitating, supporting self-problem solving</b></li>
+          </ul>
+        </div>
+
+        <div class="po-card">
+          <h3>📋 SM scenario responses</h3>
+          <p>Khi có vấn đề, đáp án đúng thường là:</p>
+          <ul>
+            <li>Ask Developer to share issue with Team</li>
+            <li>Coach team to self-organize and solve</li>
+            <li>Facilitate discussion</li>
+            <li>Teach Scrum principles</li>
+          </ul>
+          <p><b>Đáp án sai:</b> SM tự giải quyết, assign, agree/disagree, prescribe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAM TIPS -->
+  <section id="tips" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Exam Tips & Traps</h2>
+      <p class="section__sub">Những lưu ý quan trọng từ ScrumPass Study Notes.</p>
+
+      <div class="po-grid">
+        <div class="po-card">
+          <h3>⚠️ Incompatible with Scrum</h3>
+          <ul>
+            <li>Project Manager / Product Manager roles</li>
+            <li>Sprint Zero, Hardening Sprint, Release Sprint</li>
+            <li>Baselines</li>
+            <li>SM/PO ordering people (servant leadership)</li>
+            <li>Titles trong Developers (tester, architect...)</li>
+            <li>Definition of Ready (không accepted bởi Scrum.org)</li>
+          </ul>
+        </div>
+
+        <div class="po-card">
+          <h3>📝 Attend vs Participate</h3>
+          <p><b>Attend</b> = observe, watch → TRUE cho PO tại Daily Scrum.</p>
+          <p><b>Participate</b> = engage, talk → FALSE cho PO tại Daily Scrum (trừ khi đang làm Sprint Backlog item).</p>
+          <p>Một từ thay đổi tất cả!</p>
+        </div>
+
+        <div class="po-card">
+          <h3>🔤 Can vs Should</h3>
+          <p><b>"can"</b> = may (được phép) → thường TRUE</p>
+          <p><b>"should"</b> = ought to, required → thường FALSE nếu không bắt buộc</p>
+          <p>Ví dụ: "PO <i>can</i> attend Daily" ✅ vs "PO <i>should</i> attend Daily" ❌</p>
+        </div>
+
+        <div class="po-card">
+          <h3>🔢 Question Types</h3>
+          <ul>
+            <li>Multiple Choice: ~65%</li>
+            <li>Multiple Response: ~30%</li>
+            <li>True/False: ~5%</li>
+          </ul>
+          <p><b>Tìm BEST answer</b>, không phải right answer. Chú ý từ "NOT", "EXCEPT".</p>
+        </div>
+
+        <div class="po-card">
+          <h3>📊 Performance đo bằng gì?</h3>
+          <p><b>PO đo product performance:</b> customer satisfaction, stakeholder engagement, revenue.</p>
+          <p><b>KHÔNG bao giờ đo bằng:</b> velocity, burn-down, team collaboration, individual performance.</p>
+          <p><b>Developers đo Sprint performance</b> (Daily Scrum, Sprint Backlog tracking).</p>
+        </div>
+
+        <div class="po-card">
+          <h3>🏗 Tuckman's Model</h3>
+          <p>Khi thêm/bớt người → <b>productivity giảm short-term</b>. Team phải qua lại Forming → Storming → Norming → Performing.</p>
+          <p>Developers members có thể thay đổi giữa Sprint nhưng sẽ có <b>short time reduction in productivity</b>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY -->
+  <section id="glossary" class="section">
+    <div class="container">
+      <h2 class="section__title">Glossary — Thuật ngữ Scrum</h2>
+      <input type="search" id="glossarySearch" class="search" placeholder="🔎 Tìm thuật ngữ..." />
+      <div id="glossaryList" class="glossary"></div>
+    </div>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section id="flashcards" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Flashcards</h2>
+      <p class="section__sub">Click vào thẻ để lật. Dùng phím ← → để chuyển thẻ.</p>
+      <div class="flash-wrap">
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard__inner">
+            <div class="flashcard__face flashcard__front">
+              <div class="flash-q" id="flashFront"></div>
+              <div class="flash-hint">Click để lật</div>
+            </div>
+            <div class="flashcard__face flashcard__back">
+              <div class="flash-a" id="flashBack"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flash-controls">
+          <button class="btn btn--ghost" id="flashPrev">← Trước</button>
+          <span id="flashCounter" class="flash-counter">1 / 1</span>
+          <button class="btn btn--ghost" id="flashNext">Tiếp →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <h2 class="section__title">Quiz luyện thi PSM I</h2>
+      <p class="section__sub">120+ câu hỏi mô phỏng đề thi, có giải thích đáp án.</p>
+
+      <div id="quizStart" class="quiz-start">
+        <h3>Chọn chế độ ôn tập</h3>
+        <div class="quiz-modes">
+          <label><input type="radio" name="qmode" value="10" /><span>10 câu nhanh</span></label>
+          <label><input type="radio" name="qmode" value="20" checked /><span>20 câu</span></label>
+          <label><input type="radio" name="qmode" value="40" /><span>40 câu</span></label>
+          <label><input type="radio" name="qmode" value="80" /><span>80 câu (full exam)</span></label>
+          <label><input type="radio" name="qmode" value="all" /><span>Tất cả câu hỏi</span></label>
+        </div>
+        <div class="quiz-options">
+          <label><input type="checkbox" id="quizShuffle" checked />Trộn câu & đáp án</label>
+          <label><input type="checkbox" id="quizInstant" checked />Hiện đáp án ngay sau mỗi câu</label>
+        </div>
+        <button class="btn btn--primary" id="quizStartBtn">🚀 Bắt đầu</button>
+      </div>
+
+      <div id="quizPlay" class="quiz-play hidden">
+        <div class="quiz-bar">
+          <div class="quiz-bar__progress"><div id="quizProgress" class="quiz-bar__fill"></div></div>
+          <div class="quiz-bar__meta">
+            <span id="quizCounter">Câu 1/20</span>
+            <span id="quizScore">Đúng: 0</span>
+          </div>
+        </div>
+        <div id="quizQ" class="quiz-q"></div>
+        <div id="quizOpts" class="quiz-opts"></div>
+        <div id="quizExplain" class="quiz-explain hidden"></div>
+        <div class="quiz-actions">
+          <button class="btn btn--ghost" id="quizMark">🚩 Đánh dấu</button>
+          <button class="btn btn--primary" id="quizNext" disabled>Câu tiếp →</button>
+        </div>
+      </div>
+
+      <div id="quizResult" class="quiz-result hidden">
+        <div class="quiz-result__score">
+          <div class="ring" id="quizRing"><span id="quizPercent">0%</span></div>
+          <div>
+            <h3 id="quizVerdict">Kết quả</h3>
+            <p id="quizSummary"></p>
+          </div>
+        </div>
+        <div class="quiz-result__actions">
+          <button class="btn btn--primary" id="quizReview">📖 Xem lại các câu sai</button>
+          <button class="btn btn--ghost" id="quizRestart">🔄 Làm lại</button>
+        </div>
+        <div id="quizReviewList" class="quiz-review hidden"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© PSM I Study · Nội dung dựa trên <a href="https://scrumguides.org" target="_blank" rel="noopener">Scrum Guide 2020</a> của Ken Schwaber & Jeff Sutherland.</p>
+    <p class="footer__small">Được tạo bởi William</p>
+  </div>
+</footer>
+
+<script src="js/data/glossary.js"></script>
+<script src="js/data/flashcards.js"></script>
+<script src="js/data/quiz-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
