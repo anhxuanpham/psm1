@@ -1,4 +1,7 @@
 const QUIZ_DATA = [
+  // ==================== RECALL QUESTIONS (Scrum Guide 2020) ====================
+
+  // --- Foundation ---
   {
     q: "Scrum được sáng lập dựa trên gì?",
     opts: ["Empiricism và Lean Thinking", "Waterfall và Agile Manifesto", "Kanban và XP", "PMBOK và PRINCE2"],
@@ -7,518 +10,568 @@ const QUIZ_DATA = [
   },
   {
     q: "Scrum là gì?",
-    opts: ["Lightweight framework", "Methodology", "Process", "Set of best practices"],
+    opts: ["Lightweight framework giúp generate value thông qua adaptive solutions cho complex problems", "Một methodology hoàn chỉnh", "Một process có các bước cố định", "Một set of best practices"],
     ans: 0,
-    explain: "Scrum is a lightweight framework, NOT a methodology, process, or technique."
+    explain: "Scrum is a lightweight framework. NOT a methodology, process, or technique."
   },
   {
-    q: "3 trụ cột thực nghiệm của Scrum?",
+    q: "3 trụ cột thực nghiệm (empirical pillars) của Scrum?",
     opts: ["Transparency, Inspection, Adaptation", "Plan, Do, Check", "People, Process, Tools", "Vision, Strategy, Execution"],
     ans: 0,
     explain: "T-I-A: Transparency → Inspection → Adaptation. Theo thứ tự tiên quyết."
   },
   {
-    q: "5 giá trị Scrum?",
+    q: "5 giá trị Scrum (Scrum Values)?",
     opts: ["Commitment, Focus, Openness, Respect, Courage", "Trust, Transparency, Teamwork, Quality, Speed", "Communication, Simplicity, Feedback, Respect, Courage", "Honesty, Integrity, Quality, Speed, Courage"],
     ans: 0,
-    explain: "F-O-R-C-C: Focus, Openness, Respect, Commitment, Courage."
+    explain: "C-F-O-R-C: Commitment, Focus, Openness, Respect, Courage."
   },
   {
-    q: "Scrum Team được thiết kế để tối ưu điều gì?",
-    opts: ["Flexibility, Creativity, Productivity", "Speed, Quality, Cost", "Scope, Time, Budget", "Communication, Documentation, Testing"],
+    q: "Scrum framework có thể được implement một phần không?",
+    opts: ["KHÔNG — Scrum exists only in its entirety, immutable", "Có — tuỳ team chọn phần phù hợp", "Có — bỏ Retrospective nếu team mature", "Có — SM có thể quyết định"],
     ans: 0,
-    explain: "F-C-P: Flexibility, Creativity, Productivity."
+    explain: "Scrum framework is immutable. Each element serves a specific purpose. Partial implementation ≠ Scrum."
   },
+
+  // --- Scrum Team ---
   {
-    q: "Scrum Team bao gồm?",
+    q: "Scrum Team bao gồm những accountabilities nào?",
     opts: ["Product Owner, Scrum Master, Developers", "PO, SM, Developers, Stakeholders", "PO, Project Manager, Developers", "PO, SM, Developers, Testers"],
     ans: 0,
-    explain: "3 accountabilities: PO + SM + Developers. Không có sub-teams, hierarchies, hay titles."
+    explain: "3 accountabilities: PO + SM + Developers. No sub-teams, no hierarchies."
   },
   {
-    q: "Quy mô Scrum Team?",
-    opts: ["10 hoặc ít hơn", "5-9", "3-9", "Không giới hạn"],
+    q: "Quy mô Scrum Team theo Scrum Guide 2020?",
+    opts: ["Typically 10 or fewer people", "5-9 người", "3-9 người", "Không giới hạn"],
     ans: 0,
-    explain: "Typically 10 or fewer people. Nếu quá lớn → reorganize into multiple teams."
+    explain: "Typically 10 or fewer. Nếu quá lớn → consider reorganizing into multiple cohesive teams sharing same PO, PB, Product Goal."
   },
   {
-    q: "Scrum Master chịu trách nhiệm gì?",
-    opts: ["Ensuring Scrum is understood and enacted, và effectiveness của Scrum Team", "Quản lý Product Backlog", "Assign tasks cho Developers", "Báo cáo tiến độ cho management"],
+    q: "Scrum Team là gì theo Scrum Guide 2020?",
+    opts: ["Cross-functional, self-managing unit — no sub-teams or hierarchies", "Functional team theo specialization", "Self-directed team không cần PO", "Matrix team report nhiều manager"],
     ans: 0,
-    explain: "SM accountable for establishing Scrum AND the Scrum Team's effectiveness. Manage process, NOT people."
+    explain: "Scrum Teams are cross-functional and self-managing. They decide who does what, when, and how."
   },
   {
-    q: "SM là loại leader gì?",
-    opts: ["True leader who serves (servant-leader)", "Traditional manager", "Technical lead", "Project coordinator"],
+    q: "Developers cross-functional nghĩa là gì?",
+    opts: ["Team AS A WHOLE has all skills needed to create value each Sprint", "Mỗi người biết mọi thứ", "Có ít nhất 1 tester, 1 designer", "Có architect role"],
+    ans: 0,
+    explain: "Cross-functional is about the team collectively, not individuals. Team doesn't need outside help."
+  },
+  {
+    q: "Có titles/sub-teams trong Developers không?",
+    opts: ["KHÔNG — regardless of work being done, no titles except 'Developers'", "Có: Tester, Architect, etc.", "SM assign titles", "PO assign roles"],
+    ans: 0,
+    explain: "No titles or sub-teams for Developers. All are accountable as Developers."
+  },
+
+  // --- Product Owner ---
+  {
+    q: "Product Owner là?",
+    opts: ["1 person (NOT a committee), accountable for maximizing value of product", "Một hội đồng", "Nhóm 2-3 người", "Tuỳ tổ chức quyết định"],
+    ans: 0,
+    explain: "PO is ONE person, accountable for maximizing value. May represent needs of many stakeholders."
+  },
+  {
+    q: "PO có thể delegate responsibilities không?",
+    opts: ["Có — nhưng PO remains ACCOUNTABLE", "Không bao giờ", "Chỉ delegate cho SM", "Accountability cũng chuyển theo"],
+    ans: 0,
+    explain: "PO can delegate work to others but remains accountable for PB management and value."
+  },
+  {
+    q: "PO accountable for Product Backlog management bao gồm?",
+    opts: ["Developing Product Goal, creating/communicating PBIs, ordering PBIs, ensuring PB is transparent/visible/understood", "Chỉ ordering PBIs", "Chỉ viết User Stories", "Approve Sprint Backlog"],
+    ans: 0,
+    explain: "PO accountable for: Product Goal, PBI creation/communication, ordering, transparency of PB."
+  },
+
+  // --- Scrum Master ---
+  {
+    q: "Scrum Master accountable for?",
+    opts: ["Establishing Scrum as defined in Scrum Guide AND the Scrum Team's effectiveness", "Quản lý Product Backlog", "Assign tasks cho Developers", "Báo cáo tiến độ cho management"],
+    ans: 0,
+    explain: "SM accountable for establishing Scrum AND Team's effectiveness within Scrum framework."
+  },
+  {
+    q: "Scrum Master là loại leader gì?",
+    opts: ["True leader who serves the Scrum Team and larger organization", "Traditional manager", "Technical lead", "Project coordinator"],
     ans: 0,
     explain: "Scrum Masters are true leaders who serve the Scrum Team and the larger organization."
   },
   {
-    q: "SM manage gì?",
-    opts: ["The process (not people)", "People and tasks", "Budget và timeline", "Stakeholder expectations"],
+    q: "SM serves the organization bằng cách nào?",
+    opts: ["Leading/coaching Scrum adoption, planning/advising implementations, removing barriers between stakeholders and Scrum Teams", "Reporting velocity to management", "Assigning people to teams", "Approving budget"],
     ans: 0,
-    explain: "SM is a management role but manages the PROCESS, not the people."
+    explain: "SM serves org: lead/coach adoption, plan implementations, remove barriers, help understand empirical approach."
+  },
+
+  // --- Sprint ---
+  {
+    q: "Sprint duration tối đa?",
+    opts: ["One month (fixed-length, cannot shorten or lengthen once started)", "2 weeks bắt buộc", "Tuỳ team quyết định không giới hạn", "6 weeks"],
+    ans: 0,
+    explain: "Sprints are one month or less. Once started, duration is fixed."
   },
   {
-    q: "SM copes with incomplete artifact transparency bằng?",
-    opts: ["Learning, convincing, and change", "Reporting to management", "Adding more documentation", "Increasing meeting frequency"],
+    q: "Sprint mới bắt đầu khi nào?",
+    opts: ["Immediately after previous Sprint concludes (no gaps)", "Sau 1-2 ngày nghỉ", "Đầu tuần tiếp theo", "Sau khi PO approve Increment"],
     ans: 0,
-    explain: "SM detects incomplete transparency và copes via learning, convincing, and change."
+    explain: "New Sprint starts immediately after conclusion of previous Sprint."
   },
   {
-    q: "SM detect incomplete transparency qua?",
-    opts: ["Inspecting artifacts, sensing patterns, listening closely, detecting differences between expected vs real results", "Reading reports", "Asking developers to report daily", "Checking Jira tickets"],
-    ans: 0,
-    explain: "4 cách: inspect artifacts, sense patterns, listen closely, detect expected vs real results gaps."
-  },
-  {
-    q: "1 SM có thể manage bao nhiêu teams?",
-    opts: ["Multiple teams", "Chỉ 1 team", "Tối đa 2 teams", "Tối đa 3 teams"],
-    ans: 0,
-    explain: "One Scrum Master can manage multiple Scrum teams."
-  },
-  {
-    q: "PO là?",
-    opts: ["1 person, NOT a committee/PMO", "Một hội đồng", "Nhóm 2-3 người", "Tuỳ tổ chức"],
-    ans: 0,
-    explain: "PO is one person, never a committee or PMO. Even when multiple teams exist."
-  },
-  {
-    q: "Ai có quyền huỷ Sprint?",
+    q: "Ai có quyền cancel Sprint?",
     opts: ["Chỉ Product Owner", "Scrum Master", "Developers", "Stakeholders"],
     ans: 0,
     explain: "Only the Product Owner has authority to cancel the Sprint."
   },
   {
-    q: "Sprint có thể bị huỷ khi nào?",
-    opts: ["Khi Sprint Goal becomes obsolete", "Khi team không kịp", "Khi stakeholders thay đổi requirements", "Khi có bug"],
+    q: "Sprint có thể bị cancel khi nào?",
+    opts: ["Khi Sprint Goal becomes obsolete", "Khi team không kịp hoàn thành hết PBIs", "Khi stakeholders thay đổi requirements", "Khi có critical bug"],
     ans: 0,
-    explain: "Sprint cancelled when Sprint Goal becomes obsolete. Incomplete PBIs → re-estimate → back to PB."
+    explain: "Sprint cancelled only when Sprint Goal becomes obsolete."
   },
   {
-    q: "Sprint duration sau khi bắt đầu?",
-    opts: ["Fixed — cannot be shortened or lengthened", "Có thể rút ngắn", "Có thể kéo dài", "Tuỳ team"],
+    q: "Trong Sprint, điều gì KHÔNG thể thay đổi?",
+    opts: ["Sprint Goal — nothing that endangers it", "Sprint Backlog items", "Technical approach", "Team composition"],
     ans: 0,
-    explain: "Once a Sprint begins, its duration is fixed and cannot be shortened or lengthened."
+    explain: "No changes that endanger the Sprint Goal. Quality does not decrease. Scope may be clarified/re-negotiated with PO."
   },
-  {
-    q: "Sprint mới bắt đầu khi nào?",
-    opts: ["Immediately after previous Sprint (no gaps)", "Sau 1-2 ngày nghỉ", "Đầu tuần tiếp theo", "Sau khi PO approve"],
-    ans: 0,
-    explain: "New Sprint starts immediately after the conclusion of previous Sprint. No gaps, no prerequisites."
-  },
-  {
-    q: "Có Sprint Zero trong Scrum không?",
-    opts: ["Không — anti-pattern, không tồn tại", "Có — cho setup ban đầu", "Tuỳ team", "Chỉ cho project mới"],
-    ans: 0,
-    explain: "There are NO Sprint Zero, Hardening Sprints, Release Sprints in Scrum. Anti-patterns."
-  },
+
+  // --- Events ---
   {
     q: "Sprint Planning timebox cho Sprint 1 tháng?",
-    opts: ["≤ 8 giờ", "≤ 4 giờ", "≤ 2 giờ", "Không giới hạn"],
+    opts: ["Maximum 8 hours", "Maximum 4 hours", "Maximum 2 hours", "Không giới hạn"],
     ans: 0,
-    explain: "Sprint Planning is time-boxed for 8 hours or shorter (for one-month Sprint)."
+    explain: "Sprint Planning is timeboxed to max 8 hours for a one-month Sprint. Shorter Sprints = shorter Planning."
   },
   {
-    q: "Sprint Planning input?",
-    opts: ["Product Backlog, latest Increment, projected capacity, past performance", "Chỉ Product Backlog", "Sprint Goal + PBIs", "Stakeholder requirements"],
+    q: "Sprint Planning addresses 3 topics nào?",
+    opts: ["Why is this Sprint valuable? What can be Done? How will chosen work get done?", "What, When, Who", "Scope, Time, Budget", "Plan, Do, Check"],
     ans: 0,
-    explain: "Input: 1) PB prioritized, 2) latest Increment, 3) projected capacity, 4) past performance."
+    explain: "Topic 1: Why (Sprint Goal), Topic 2: What (select PBIs), Topic 3: How (plan work)."
+  },
+  {
+    q: "Daily Scrum timebox?",
+    opts: ["15 minutes", "30 minutes", "1 hour", "Tuỳ team"],
+    ans: 0,
+    explain: "Daily Scrum is timeboxed to 15 minutes, every working day of Sprint."
   },
   {
     q: "Daily Scrum dành cho ai?",
-    opts: ["Developers (participate/talk)", "Toàn bộ Scrum Team", "SM và Developers", "Bất kỳ ai"],
+    opts: ["Developers (they own and conduct it)", "Toàn bộ Scrum Team bắt buộc", "SM và Developers", "Bất kỳ ai muốn tham dự"],
     ans: 0,
-    explain: "Daily Scrum is for Developers — they participate (talk). Others can attend (observe only)."
+    explain: "Daily Scrum is for Developers. SM/PO can attend but only Developers conduct it."
   },
   {
-    q: "PO tại Daily Scrum?",
-    opts: ["Can attend (observe) but NOT participate (unless doing Sprint Backlog work)", "Must participate", "Cannot attend at all", "Must report to PO after"],
+    q: "Daily Scrum purpose?",
+    opts: ["Inspect progress toward Sprint Goal and adapt Sprint Backlog as necessary", "Status report cho SM", "SM assign daily tasks", "PO kiểm tra progress"],
     ans: 0,
-    explain: "'PO can attend Daily' ✅ but 'PO participates in Daily' ❌ (trừ khi đang làm SB item)."
+    explain: "Purpose: inspect progress toward Sprint Goal, adapt Sprint Backlog. Improves communication, identifies impediments."
   },
   {
-    q: "Sprint Review là?",
-    opts: ["Working session (informal meeting), NOT presentation", "Formal presentation/demo", "Sign-off meeting", "Approval gate"],
+    q: "Sprint Review timebox cho Sprint 1 tháng?",
+    opts: ["Maximum 4 hours", "Maximum 8 hours", "Maximum 2 hours", "Maximum 1 hour"],
     ans: 0,
-    explain: "Sprint Review is an informal meeting / working session. Scrum Team + stakeholders collaborate."
+    explain: "Sprint Review timeboxed to max 4 hours for one-month Sprint."
   },
   {
-    q: "Sprint Review output?",
-    opts: ["Inspected Increment + revised Product Backlog", "Approved Increment", "Performance report", "Sprint Backlog cho Sprint tiếp"],
+    q: "Sprint Review là gì?",
+    opts: ["Working session to inspect Increment and adapt Product Backlog — NOT a presentation", "Formal presentation/demo cho stakeholders", "Sign-off meeting", "Approval gate để release"],
     ans: 0,
-    explain: "Output: Inspected Increment + revised PB that defines probable items for next Sprint."
-  },
-  {
-    q: "2 events nào stakeholders (ngoài Scrum Team) có thể participate?",
-    opts: ["Sprint Review + Sprint Planning", "Sprint Review + Retro", "Daily Scrum + Review", "Planning + Retro"],
-    ans: 0,
-    explain: "Only Sprint Review and Sprint Planning allow external participation."
+    explain: "Sprint Review is a working session. Scrum Team presents results and discusses progress toward Product Goal."
   },
   {
     q: "Sự kiện nào KẾT THÚC Sprint?",
-    opts: ["Sprint Retrospective", "Sprint Review", "Daily Scrum cuối", "Hết timebox"],
+    opts: ["Sprint Retrospective", "Sprint Review", "Daily Scrum cuối cùng", "Khi hết timebox Sprint"],
     ans: 0,
-    explain: "Sprint Retrospective concludes the Sprint. Review là kế cuối (second to last)."
+    explain: "Sprint Retrospective concludes the Sprint."
   },
   {
-    q: "Sprint Retrospective inspects?",
-    opts: ["People, relationships, process, tools", "Only code quality", "Only process", "Only technical debt"],
+    q: "Sprint Retrospective purpose?",
+    opts: ["Plan ways to increase quality and effectiveness", "Blame team members", "Report to management", "Only discuss process"],
     ans: 0,
-    explain: "Inspect last Sprint: people, relationships, process, tools. Create improvement plan."
+    explain: "Retro purpose: plan ways to increase quality and effectiveness. Inspects individuals, interactions, processes, tools, DoD."
   },
   {
-    q: "PO tại Sprint Retrospective?",
-    opts: ["Participating as Scrum Team member", "Không tham dự", "Chỉ observe", "Chỉ khi SM mời"],
+    q: "Sprint Retrospective timebox cho Sprint 1 tháng?",
+    opts: ["Maximum 3 hours", "Maximum 4 hours", "Maximum 1 hour", "Không giới hạn"],
     ans: 0,
-    explain: "PO participates in Sprint Retrospective as a Scrum Team member."
+    explain: "Sprint Retrospective timeboxed to max 3 hours for one-month Sprint."
+  },
+
+  // --- Artifacts & Commitments ---
+  {
+    q: "3 artifacts trong Scrum và commitments tương ứng?",
+    opts: ["Product Backlog → Product Goal, Sprint Backlog → Sprint Goal, Increment → Definition of Done", "PB → Vision, SB → Plan, Increment → Release", "PB → Scope, SB → Schedule, Increment → Quality", "PB → Requirements, SB → Tasks, Increment → Delivery"],
+    ans: 0,
+    explain: "Each artifact has a commitment: PB→Product Goal, SB→Sprint Goal, Increment→DoD."
   },
   {
-    q: "Product Backlog attributes?",
-    opts: ["Description, order, estimate, value", "Title, status, assignee", "Priority, effort, deadline", "Story points, acceptance criteria"],
+    q: "Product Goal là gì?",
+    opts: ["Long-term objective for the Scrum Team — future state of product in Product Backlog", "Sprint-level target", "Release date", "Feature list"],
     ans: 0,
-    explain: "PBIs have attributes: description, order, estimate, and value. Often include test descriptions."
+    explain: "Product Goal describes future state of product. It is in the Product Backlog. Team must fulfill (or abandon) one before next."
   },
   {
-    q: "Refinement chiếm bao nhiêu?",
-    opts: ["No more than 10% of Developers' capacity", "25% of Sprint", "50% of Sprint Planning", "Tuỳ team"],
+    q: "Sprint Goal được tạo khi nào và bởi ai?",
+    opts: ["During Sprint Planning, by the entire Scrum Team collaboratively", "Trước Sprint bởi PO", "Bởi Developers trong Daily Scrum", "Bởi SM"],
     ans: 0,
-    explain: "Refinement usually takes no more than 10% of the capacity of the Developers."
+    explain: "Sprint Goal crafted during Sprint Planning by entire Scrum Team."
   },
   {
     q: "Ai owns Sprint Backlog?",
     opts: ["Developers", "Product Owner", "Scrum Master", "Whole Scrum Team"],
     ans: 0,
-    explain: "Sprint Backlog is owned and managed by Developers. Not the whole Scrum Team."
+    explain: "Sprint Backlog belongs to Developers. They manage it and update it throughout Sprint."
   },
   {
-    q: "Sprint Goal có thể thay đổi trong Sprint?",
-    opts: ["KHÔNG — cannot be changed", "Có nếu PO đồng ý", "Có nếu team vote", "Tuỳ tình huống"],
+    q: "Sprint Backlog gồm những gì?",
+    opts: ["Sprint Goal (why) + selected PBIs (what) + actionable plan for delivering Increment (how)", "Chỉ list of PBIs", "Chỉ tasks", "PBIs + estimates"],
     ans: 0,
-    explain: "Sprint Goal can't be changed during Sprint. Only PO can cancel Sprint if Goal becomes obsolete."
+    explain: "Sprint Backlog = Sprint Goal + PBIs selected + plan to deliver Increment."
   },
   {
-    q: "Ai craft Sprint Goal?",
-    opts: ["Whole Scrum Team (collaboratively)", "Product Owner alone", "Developers", "Scrum Master"],
+    q: "Definition of Done (DoD) là gì?",
+    opts: ["Formal description of state of Increment when it meets quality measures required for product", "Acceptance criteria của từng PBI", "Test cases", "PO approval checklist"],
     ans: 0,
-    explain: "Sprint Goal is created by the whole Scrum Team during Sprint Planning."
+    explain: "DoD is formal description of Increment's state when it meets quality measures. Creates transparency."
   },
   {
-    q: "DoD có thể thay đổi giữa Sprint không?",
-    opts: ["KHÔNG — can improve between Sprints but NOT mid-Sprint", "Có bất cứ lúc nào", "Chỉ PO đổi", "Chỉ SM đổi"],
+    q: "Khi nhiều Scrum Teams cùng làm 1 product, DoD phải như thế nào?",
+    opts: ["All teams must mutually define and comply with the SAME Definition of Done", "Mỗi team tự có DoD riêng không liên quan", "Team nào DoD cao hơn thì tốt hơn", "PO quyết định DoD cho từng team"],
     ans: 0,
-    explain: "DoD shouldn't change in the middle of Sprint. Can be improved during project (at Retro)."
+    explain: "Scrum Guide 2020: If multiple teams work on same product, they must mutually define and comply with the same DoD."
   },
   {
-    q: "DoD do ai tạo/thay đổi?",
-    opts: ["Scrum Team (Developers adjust); NOT PO alone", "Product Owner", "Scrum Master", "Management"],
+    q: "Nếu DoD là part of standards of the organization?",
+    opts: ["All Scrum Teams must follow it as a minimum; teams can add stricter criteria", "Teams có thể ignore", "Chỉ áp dụng cho 1 team", "SM quyết định có follow không"],
     ans: 0,
-    explain: "DoD created by Scrum Team. Inside project, only Developers may change/define it. NOT PO."
+    explain: "If org standards exist, all teams follow as minimum. If not org standard, Scrum Team must create appropriate DoD."
   },
   {
-    q: "Multiple teams cùng product — DoD?",
-    opts: ["Can have multiple DoDs, must be compatible & capable of creating integrated Increment", "Mỗi team DoD riêng không liên quan", "Chỉ 1 DoD cho tất cả", "PO chọn"],
+    q: "PBI không meet Definition of Done?",
+    opts: ["Cannot be released — returns to Product Backlog for future consideration", "Vẫn release được nếu PO đồng ý", "Auto chuyển sang Sprint tiếp", "Bị xoá khỏi PB"],
     ans: 0,
-    explain: "Can be multiple definitions, as long as compatible and capable of creating integrated Increments."
+    explain: "If PBI doesn't meet DoD, it cannot be released or presented at Sprint Review. Goes back to PB."
   },
   {
-    q: "PBI không đạt DoD?",
-    opts: ["Cannot release, re-estimate, back to Product Backlog", "Vẫn release được", "Auto move to next Sprint", "Bị xoá"],
+    q: "Increment là gì?",
+    opts: ["Concrete stepping stone toward Product Goal — must be usable and meet DoD", "Chỉ code mới viết trong Sprint", "Release package", "Demo tại Sprint Review"],
     ans: 0,
-    explain: "Cannot be released or presented at Sprint Review. Returns to Product Backlog."
+    explain: "Increment = concrete stepping stone toward Product Goal. Each must be additive to prior Increments, verified to work together."
   },
   {
-    q: "Ai tạo Increment?",
-    opts: ["Only Developers", "Whole Scrum Team", "PO + Developers", "SM coordinates"],
+    q: "Có thể có nhiều Increments trong 1 Sprint không?",
+    opts: ["Có — multiple Increments may be created within a Sprint, delivery not limited to Sprint Review", "Không — chỉ 1 Increment per Sprint", "Chỉ nếu PO cho phép", "Chỉ ở Sprint cuối"],
     ans: 0,
-    explain: "Only members of the Developers create the Increment."
+    explain: "Multiple Increments may be created within Sprint. Can be delivered to stakeholders anytime, not just at Review."
+  },
+
+  // --- Scaling & Other ---
+  {
+    q: "Scaled Scrum: n teams cùng 1 product cần?",
+    opts: ["1 Product Backlog, 1 Product Owner, 1 Product Goal, same DoD", "n Product Backlogs", "n Product Owners", "n Product Goals"],
+    ans: 0,
+    explain: "1 Product = 1 PB = 1 PO = 1 Product Goal = same DoD. Multiple teams share these."
   },
   {
-    q: "Increment phải?",
-    opts: ["Potentially releasable and usable", "Complete all PBIs", "Pass all tests", "Be deployed to production"],
+    q: "Product Backlog Refinement là gì?",
+    opts: ["Ongoing activity to break down and further define PBIs — NOT a formal event", "Formal Scrum event", "Chỉ làm trong Sprint Planning", "SM's responsibility"],
     ans: 0,
-    explain: "All increments must be potentially releasable to enable usable feedback."
+    explain: "Refinement is ongoing activity. Developers and PO collaborate to add detail, order, and size to PBIs."
   },
   {
     q: "Ai estimate PBIs?",
-    opts: ["Developers (effort/size)", "Product Owner", "Scrum Master", "Stakeholders"],
+    opts: ["Developers (those doing the work make the estimate)", "Product Owner", "Scrum Master", "Stakeholders"],
     ans: 0,
-    explain: "Developers estimate effort/size. PO estimates VALUE (different from size)."
-  },
-  {
-    q: "PO đo product performance bằng?",
-    opts: ["Customer satisfaction, revenue, stakeholder engagement", "Velocity", "Burn-down charts", "Individual developer output"],
-    ans: 0,
-    explain: "PO measures via customer satisfaction, stakeholder engagement, revenues. NEVER velocity, burn-down, individual performance."
-  },
-  {
-    q: "Developers đo gì?",
-    opts: ["Sprint performance (daily, Sprint Backlog)", "Product value", "Customer satisfaction", "Revenue"],
-    ans: 0,
-    explain: "Developers measure Sprint performance. PO measures project/product performance."
-  },
-  {
-    q: "Velocity dùng cho?",
-    opts: ["Internal use by Developers for forecasting — NOT performance measurement", "Management reporting", "PO planning", "Comparing teams"],
-    ans: 0,
-    explain: "Velocity tracked by Developers for internal use. Not for comparing teams or measuring performance."
-  },
-  {
-    q: "SM serves PO bằng cách?",
-    opts: ["Finding PB management techniques, helping clear PBIs, empirical planning, facilitating stakeholders", "Writing PBIs for PO", "Ordering PB", "Cancelling Sprint khi cần"],
-    ans: 0,
-    explain: "SM helps PO: effective PB management techniques, clear PBIs, empirical planning, stakeholder collaboration."
-  },
-  {
-    q: "SM response tốt nhất khi Developer báo security issue?",
-    opts: ["Ask Developer to share with Scrum Team ASAP", "SM confirms with test team", "SM creates PBI", "SM postpones Sprint"],
-    ans: 0,
-    explain: "SM facilitates — ask Developer to share issue with Team. NOT: SM tự giải quyết."
-  },
-  {
-    q: "Developer bị stakeholder yêu cầu làm item ngoài Sprint?",
-    opts: ["Notify Product Owner để PO work với stakeholder", "Add to Sprint Backlog", "Replace equal-size item", "Immediately work on it"],
-    ans: 0,
-    explain: "Notify PO. PO manages stakeholder expectations. Developers don't take orders from stakeholders."
-  },
-  {
-    q: "SM scenario: đáp án đúng thường liên quan?",
-    opts: ["Coaching, teaching, facilitating, supporting self-problem solving", "SM tự giải quyết vấn đề", "SM assign task", "SM agree/disagree với opinion"],
-    ans: 0,
-    explain: "SM coaches/facilitates. Answers suggesting SM agrees, disagrees, or prescribes solutions are usually INCORRECT."
-  },
-  {
-    q: "Trong Sprint, scope có thể thay đổi không?",
-    opts: ["Có — re-negotiate với PO, nhưng Sprint Goal KHÔNG đổi", "Không bao giờ", "Chỉ SM cho phép", "Chỉ trong Daily Scrum"],
-    ans: 0,
-    explain: "Scope can be re-negotiated between PO and Developers. But Sprint Goal cannot change."
-  },
-  {
-    q: "Quality goals trong Sprint?",
-    opts: ["Do NOT decrease", "Có thể giảm nếu PO đồng ý", "Tuỳ team", "Giảm để kịp deadline"],
-    ans: 0,
-    explain: "Quality goals do not decrease during Sprint. Non-negotiable."
-  },
-  {
-    q: "Developers members thay đổi giữa Sprint?",
-    opts: ["Possible nhưng gây short-term reduction in productivity", "Không được", "Chỉ SM approve", "Chỉ cuối Sprint"],
-    ans: 0,
-    explain: "Members can change during Sprint, with the concern of creating a short time reduction in productivity."
-  },
-  {
-    q: "Tuckman's Model: thêm người vào team đang chạy?",
-    opts: ["Productivity likely DECREASES short-term", "Productivity tăng ngay", "Không ảnh hưởng", "Chỉ tăng bugs"],
-    ans: 0,
-    explain: "Tuckman: adding/removing people → productivity decreases short-term. Team must reform."
-  },
-  {
-    q: "Burn-down chart trong Scrum?",
-    opts: ["Optional, helpful to visualize remaining work — does NOT replace empiricism", "Mandatory", "Required by SM", "Only for management"],
-    ans: 0,
-    explain: "Burn-down charts are optional tools. Helpful but do not replace the importance of empiricism."
-  },
-  {
-    q: "Scaled Scrum: n teams cần?",
-    opts: ["1 Product Backlog, 1 PO, n Sprint Backlogs, 1 integrated Increment", "n Product Backlogs", "n POs", "n Product Goals"],
-    ans: 0,
-    explain: "1 Product = 1 PB = 1 PO. n teams → n Sprint Backlogs, n SMs possible, 1 integrated Increment."
-  },
-  {
-    q: "Có titles trong Developers không?",
-    opts: ["KHÔNG — tất cả đều là 'Developers', no titles", "Có: Tester, Architect, etc.", "SM assign titles", "PO assign roles"],
-    ans: 0,
-    explain: "No titles in Developers. All are just 'developers'. We want all accountable for everything."
-  },
-  {
-    q: "All Scrum roles, events, artifacts?",
-    opts: ["Necessary and should NOT be ignored for any reason", "Optional, tuỳ team", "Có thể bỏ bớt", "Chỉ áp dụng một phần"],
-    ans: 0,
-    explain: "All Scrum roles, events, and artifacts are necessary and should not be ignored for any reason."
-  },
-  {
-    q: "Scrum KHÔNG có?",
-    opts: ["Project Manager role — activities distributed among 3 Scrum roles", "Product Owner", "Scrum Master", "Developers"],
-    ans: 0,
-    explain: "Scrum doesn't have a Project Manager role. Project management activities distributed among the three Scrum roles."
-  },
-  {
-    q: "Developers cross-functional nghĩa là?",
-    opts: ["Team AS A WHOLE has all skills needed — not individual members", "Mỗi người biết mọi thứ", "Có ít nhất 1 tester", "Có architect"],
-    ans: 0,
-    explain: "Cross-functional is about the team as a whole, not individual members. Team doesn't need outside help."
-  },
-  {
-    q: "PO có thể delegate responsibilities?",
-    opts: ["Có, nhưng PO remains ACCOUNTABLE", "Không bao giờ", "Chỉ cho SM", "Accountability cũng chuyển"],
-    ans: 0,
-    explain: "PO can delegate responsibilities to Developers. But PO remains accountable."
-  },
-  {
-    q: "PO trong Sprint Retrospective làm gì?",
-    opts: ["Participating as a Scrum Team member", "Không tham dự", "Chỉ observe", "Report cho stakeholders"],
-    ans: 0,
-    explain: "PO participates in Retrospective as a Scrum Team member."
-  },
-  {
-    q: "Sprint Goal helps?",
-    opts: ["Focus on the outcome expected from the Sprint", "Track individual tasks", "Measure velocity", "Report to management"],
-    ans: 0,
-    explain: "Sprint Goal helps focus on the outcome expected from the Sprint."
-  },
-  {
-    q: "All teams in Scaled Scrum should have same Sprint length?",
-    opts: ["FALSE — not required", "TRUE — must be same", "Only if SM decides", "Only if PO requires"],
-    ans: 0,
-    explain: "Teams working on same product do NOT need to have same Sprint length. This is FALSE."
-  },
-  {
-    q: "Ai decides how teams are formed in scaled Scrum?",
-    opts: ["Developers themselves", "Management", "SM", "PO"],
-    ans: 0,
-    explain: "Developers themselves will decide on how to form the teams when multiple teams are composed."
-  },
-  {
-    q: "Non-functional requirements in Scrum?",
-    opts: ["Incorporated into every Increment (via PB items or DoD)", "Handled after all Sprints", "Separate team handles", "Ignored"],
-    ans: 0,
-    explain: "Developers deal with non-functional features incorporating them into every increment."
-  },
-  {
-    q: "One person can have more than one role?",
-    opts: ["Possible but NOT recommended (e.g., PO + SM)", "Forbidden", "Required for small teams", "Only PO + Developer"],
-    ans: 0,
-    explain: "One person can have more than one role (e.g., both PO and SM). Not forbidden but not recommended."
+    explain: "Developers who will do the work are responsible for sizing/estimating."
   },
   {
     q: "PO có thể order Developers làm gì không?",
-    opts: ["KHÔNG — Developers is self-managing, PO may not order them", "Có — PO là boss", "Chỉ urgent items", "Qua SM"],
+    opts: ["KHÔNG — Developers are self-managing, they decide how to turn PBIs into Increments", "Có — PO quyết định ai làm gì", "Chỉ urgent items", "Thông qua SM"],
     ans: 0,
-    explain: "PO may not order the Developers to do things. Developers is self-organized/self-managed."
+    explain: "Developers are self-managing. Nobody tells them how to turn PBIs into Increments of value."
   },
   {
-    q: "Feedback loops trong Scrum?",
-    opts: ["Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective", "Only Daily Scrum", "Only Retrospective", "All meetings including standup"],
+    q: "Scrum có role Project Manager không?",
+    opts: ["KHÔNG — không có PM role trong Scrum", "Có — SM kiêm PM", "Có — PO kiêm PM", "Tuỳ organization"],
     ans: 0,
-    explain: "All 4 events within Sprint are formal opportunities for inspecting and adapting (feedback loops)."
+    explain: "No Project Manager role in Scrum. PM activities distributed among PO, SM, and Developers."
   },
   {
-    q: "Sustainable pace trong Scrum?",
-    opts: ["Agile principle — increases productivity & quality", "Sprint faster mỗi Sprint", "Maximize overtime", "Optional"],
+    q: "SM facilitates Scrum events khi nào?",
+    opts: ["As requested or needed — not mandatory for SM to facilitate every event", "Bắt buộc mọi event", "Chỉ Sprint Planning", "Không bao giờ — team tự facilitate"],
     ans: 0,
-    explain: "Working at sustainable pace is an Agile principle. Helps increase productivity and quality."
-  },
-  {
-    q: "Release decision by?",
-    opts: ["Product Owner decides when to release", "Scrum Master", "Developers", "Stakeholders"],
-    ans: 0,
-    explain: "Product Owner decides when to release the product."
-  },
-  {
-    q: "Product Backlog Refinement?",
-    opts: ["Ongoing process — adding detail, estimates, order. NOT a formal event", "Formal event", "Done only in Sprint Planning", "SM's responsibility"],
-    ans: 0,
-    explain: "Refinement is an ongoing process. Act of adding detail, estimates, and order to PBIs."
-  },
-  {
-    q: "Sprint Review có phải gate to release?",
-    opts: ["KHÔNG — Increment can be released anytime, Sprint Review is not a gate", "Có — phải qua Review", "Chỉ PO approve tại Review", "Tuỳ team"],
-    ans: 0,
-    explain: "Sprint Review should never be considered a gate to releasing value. Product can be released multiple times within Sprint."
-  },
-  {
-    q: "Developers chịu trách nhiệm?",
-    opts: ["Managing Sprint Backlog, all estimates, doing all work for PBIs", "Managing Product Backlog", "Reporting to PO daily", "Following SM instructions"],
-    ans: 0,
-    explain: "Developers responsible for: managing Sprint Backlog, all estimates, all work for PBIs."
-  },
-  {
-    q: "Technical approach decided by?",
-    opts: ["Developers (completely up to them)", "Scrum Master", "Product Owner", "Architect role"],
-    ans: 0,
-    explain: "The technical approach is completely up to the Developers. Self-organizing."
-  },
-  {
-    q: "Developers can change engineering practices?",
-    opts: ["Whenever they want", "Only at Retrospective", "Only with SM approval", "Only between Sprints"],
-    ans: 0,
-    explain: "Developers is free to change their engineering practices whenever they want."
-  },
-  {
-    q: "Sprint burn-down chart helpful for?",
-    opts: ["Indicate total work remaining for the Sprint", "Know hours each Developer worked", "SM to manage tasks", "Indicate if more people needed"],
-    ans: 0,
-    explain: "Burn-down helpful to indicate total work remaining. NOT for tracking individual hours or managing tasks."
-  },
-  {
-    q: "Budgeting in Scrum?",
-    opts: ["Ideally revised each Sprint to ensure value is being delivered", "Fixed at project start", "Only PO decides", "Not mentioned"],
-    ans: 0,
-    explain: "Budgeting done in Scrum ideally revised each Sprint to ensure value is being delivered."
-  },
-  {
-    q: "After Sprint is cancelled, incomplete PBIs?",
-    opts: ["Re-estimated and moved back to Product Backlog", "Automatically in next Sprint", "Deleted", "Marked as failed"],
-    ans: 0,
-    explain: "Incomplete PBIs re-estimated and moved into Product Backlog."
-  },
-  {
-    q: "Timeboxes in Scrum help?",
-    opts: ["Limit work-in-progress", "Ensure all items finished", "Maximize velocity", "Help PO determine Iron Triangle"],
-    ans: 0,
-    explain: "Using timeboxes limits work in progress. This is the desired benefit of having time-boxes."
-  },
-  {
-    q: "Scrum Master facilitates Scrum events?",
-    opts: ["If requested or needed", "Always mandatory", "Never — team self-facilitates", "Only Daily Scrum"],
-    ans: 0,
-    explain: "SM facilitates Scrum events as requested or needed. Not mandatory for SM to facilitate every event."
-  },
-  {
-    q: "Purpose of each Sprint?",
-    opts: ["Create a potentially releasable piece of product (doesn't have to be released)", "Deliver everything in Sprint Backlog", "Achieve maximum velocity", "Complete all PBIs"],
-    ans: 0,
-    explain: "Purpose is to create potentially releasable product. It doesn't have to be released."
-  },
-  {
-    q: "KVA categories PO should consider?",
-    opts: ["Current Value, Time-to-Market, Ability to Innovate", "Velocity, Burn-down, Throughput", "Revenue only", "Customer NPS only"],
-    ans: 0,
-    explain: "Key Value Areas: Current Value, Time-to-Market, Ability to Innovate."
+    explain: "SM ensures events take place and are productive. Facilitates as requested or needed."
   },
   {
     q: "Transparency best described as?",
-    opts: ["Significant aspects of process visible to those responsible for outcome", "Daily status reports", "Detailed documentation", "Open office layout"],
+    opts: ["Emergent process and work must be visible to those performing and receiving the work", "Daily status reports cho management", "Detailed documentation", "Open office layout"],
     ans: 0,
-    explain: "Transparency: significant aspects of the process must be visible to those responsible for the outcome."
+    explain: "Transparency: emergent process/work visible to those performing and receiving work. Enables inspection."
   },
   {
-    q: "PO work that PO might delegate?",
-    opts: ["Ordering the Product Backlog", "Attending Sprint Planning", "Writing User Stories (not PO's core work)", "Creating acceptance criteria"],
+    q: "Release decision thuộc về ai?",
+    opts: ["Product Owner — releasing value là business decision", "Scrum Master", "Developers", "Stakeholders vote"],
     ans: 0,
-    explain: "PO might delegate ordering PB. Writing stories & acceptance criteria are not specifically PO work in Scrum."
+    explain: "PO decides when to release. Increment can be released at any time, not limited to Sprint Review."
+  },
+
+  // ==================== SCENARIO-BASED QUESTIONS (Scrum Master focus) ====================
+
+  {
+    q: "Developer báo với SM: 'Tôi phát hiện technical debt nghiêm trọng.' SM nên làm gì?",
+    opts: ["Coach Developer chia sẻ với cả team và encourage team tự quyết định cách xử lý", "SM tạo PBI về technical debt", "SM báo PO yêu cầu thêm Sprint", "SM đồng ý rằng đó là vấn đề lớn và hứa sẽ fix"],
+    ans: 0,
+    explain: "SM coaches — encourage Developer to raise with team. Team self-manages solutions. SM doesn't prescribe."
   },
   {
-    q: "Sprint Planning prerequisite?",
-    opts: ["None — starts after previous Sprint's Retro ends", "Product Backlog must be 100% refined", "SM must approve", "Architecture must be in place"],
+    q: "2 Developers xung đột về technical approach. SM nên?",
+    opts: ["Facilitate discussion giữa họ, coach team tự resolve conflict", "Quyết định approach nào đúng", "Tách 2 người ra làm riêng", "Escalate lên management"],
     ans: 0,
-    explain: "No prerequisite for Sprint Planning. After previous Sprint's Retro, new Sprint begins immediately with Planning."
+    explain: "SM facilitates, not decides. Help team develop conflict resolution skills. Technical decisions belong to Developers."
+  },
+  {
+    q: "Stakeholder yêu cầu SM thêm item vào Sprint đang chạy. SM nên?",
+    opts: ["Redirect stakeholder đến Product Owner — PO manages Product Backlog", "Thêm vào Sprint Backlog nếu quan trọng", "Từ chối thẳng stakeholder", "Họp team ngay để discuss"],
+    ans: 0,
+    explain: "SM redirects to PO. Only PO manages PB. Scope negotiation during Sprint is between PO and Developers."
+  },
+  {
+    q: "Developer nói với SM: 'Daily Scrum vô ích, mất thời gian.' SM nên?",
+    opts: ["Coach Developer về purpose của Daily Scrum, hỏi team muốn adjust format thế nào", "Đồng ý bỏ Daily Scrum", "Bắt buộc Developer phải tham dự và report", "Report Developer lên management"],
+    ans: 0,
+    explain: "SM coaches on purpose (inspect progress toward Sprint Goal). Team can choose any structure/technique for Daily."
+  },
+  {
+    q: "Manager yêu cầu SM cung cấp individual performance report của Developers. SM nên?",
+    opts: ["Explain rằng Scrum Team is accountable as a whole, coach manager về team accountability", "Cung cấp report theo yêu cầu", "Hỏi Developers có đồng ý không", "Gửi velocity chart thay thế"],
+    ans: 0,
+    explain: "SM coaches organization. Scrum has no individual performance tracking. Whole team is accountable together."
+  },
+  {
+    q: "PO muốn skip Sprint Retrospective vì 'không có thời gian'. SM nên?",
+    opts: ["Coach PO rằng Retro là mandatory event, explain value của continuous improvement", "Đồng ý skip vì PO quyết định", "Chạy Retro không có PO", "Cancel Sprint"],
+    ans: 0,
+    explain: "All Scrum events are mandatory. SM ensures events take place and are productive. Coach on importance."
+  },
+  {
+    q: "Team mới liên tục không hoàn thành Sprint Goal. SM nên?",
+    opts: ["Facilitate team discussion về root causes, coach team cách forecast tốt hơn và giảm scope", "Yêu cầu team làm overtime", "Thêm người vào team", "Report team performance cho management"],
+    ans: 0,
+    explain: "SM facilitates learning. Help team inspect/adapt. Coach on forecasting, not force overtime or blame."
+  },
+  {
+    q: "Developer bị stakeholder trực tiếp yêu cầu làm feature ngoài Sprint Backlog. SM nên?",
+    opts: ["Coach Developer to redirect stakeholder đến PO — Developers don't take direction from outside", "Cho phép nếu feature nhỏ", "SM nói với stakeholder rằng không được", "Thêm feature vào Sprint Backlog"],
+    ans: 0,
+    explain: "Nobody outside team tells Developers what to do. SM coaches Developer to redirect stakeholder to PO."
+  },
+  {
+    q: "Trong Sprint Review, stakeholder không hài lòng và yêu cầu thay đổi lớn. SM nên?",
+    opts: ["Facilitate discussion, ensure feedback is captured — PO will decide ordering of new work in PB", "Hứa team sẽ fix ngay Sprint sau", "Bảo vệ team khỏi criticism", "Yêu cầu stakeholder viết formal change request"],
+    ans: 0,
+    explain: "SM facilitates. Sprint Review is for gathering feedback. PO decides what goes into PB and priority."
+  },
+  {
+    q: "Developer mới join team và hỏi SM: 'Ai assign tasks cho tôi?' SM nên?",
+    opts: ["Coach rằng Developers self-manage — team cùng decide who does what, when, how", "SM assign tasks cho Developer mới", "Hỏi PO assign", "Chỉ Developer senior nhất"],
+    ans: 0,
+    explain: "SM coaches on self-management. Nobody assigns tasks — Developers collectively decide."
+  },
+  {
+    q: "PO muốn thay đổi Sprint Goal giữa Sprint. SM nên?",
+    opts: ["Explain Sprint Goal cannot change during Sprint — nếu Goal obsolete, chỉ PO cancel Sprint", "Đồng ý vì PO có quyền", "Hỏi team vote", "Cho phép nếu change nhỏ"],
+    ans: 0,
+    explain: "Sprint Goal is fixed during Sprint. If obsolete, only recourse is PO cancels Sprint."
+  },
+  {
+    q: "Team muốn extend Sprint thêm 2 ngày để hoàn thành tất cả PBIs. SM nên?",
+    opts: ["Explain Sprint duration is fixed — coach team rằng không cần hoàn thành all PBIs, focus Sprint Goal", "Đồng ý extend vì team cần", "Hỏi PO approve extension", "Cho thêm 1 ngày thay vì 2"],
+    ans: 0,
+    explain: "Sprint length is fixed, cannot be extended. Incomplete PBIs go back to PB. Sprint Goal matters, not completing all items."
+  },
+  {
+    q: "Developers không muốn cho PO tham dự Daily Scrum. SM nên?",
+    opts: ["Support Developers — Daily Scrum is for Developers; PO doesn't need to attend", "Bắt buộc PO phải dự", "Compromise: PO dự 2 ngày/tuần", "Nói Developers phải accept PO"],
+    ans: 0,
+    explain: "Daily Scrum is for Developers. PO/SM may attend if doing Dev work, but it's Developers' event."
+  },
+  {
+    q: "SM nhận thấy DoD của team quá thấp, Increments có nhiều bugs. SM nên?",
+    opts: ["Facilitate team discussion về quality, coach team strengthen DoD tại Retrospective", "SM tự nâng DoD", "Report cho management", "Thêm QA member vào team"],
+    ans: 0,
+    explain: "SM coaches on quality. DoD improvement is discussed at Retro. Team decides how to strengthen it."
+  },
+  {
+    q: "Organization yêu cầu team dùng specific tool. SM nên?",
+    opts: ["Coach organization rằng Developers self-manage their tools; facilitate discussion để tìm compromise", "Bắt team phải comply ngay", "Ignore organization requirement", "Escalate cho PO xử lý"],
+    ans: 0,
+    explain: "SM serves org AND team. Facilitate conversation — Developers are self-managing but must work within org context."
+  },
+  {
+    q: "PO bận và không attend Sprint Planning. SM nên?",
+    opts: ["Coach PO rằng participation in Sprint Planning is essential — PO proposes how product could increase value", "Chạy Planning không có PO", "SM thay PO chọn PBIs", "Cancel Sprint Planning"],
+    ans: 0,
+    explain: "PO's participation is important — proposes value, discusses Product Goal. SM coaches PO to attend."
+  },
+  {
+    q: "Developer báo bị blocked bởi external dependency. SM nên?",
+    opts: ["Help remove impediment — SM serves team by removing blockers/barriers that impede progress", "Bảo Developer tự liên hệ", "Đợi đến Sprint Review để discuss", "Cancel Sprint"],
+    ans: 0,
+    explain: "Removing impediments is part of SM's service to the team. SM helps clear organizational obstacles."
+  },
+  {
+    q: "Sau nhiều Sprints, team không improve velocity. SM nên?",
+    opts: ["Facilitate Retrospective focus on continuous improvement — inspect what slows them down", "Đặt velocity target cho team", "Yêu cầu team commit nhiều hơn", "Report cho management để tăng pressure"],
+    ans: 0,
+    explain: "SM facilitates improvement through Retro. Never sets velocity targets or pressures team. Velocity is not a performance metric."
+  },
+
+  // ==================== MULTI-SELECT QUESTIONS ====================
+
+  {
+    q: "Scrum Master serves Developers bằng những cách nào? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Coaching team trong self-management và cross-functionality",
+      "Helping team focus on creating high-value Increments that meet DoD",
+      "Causing removal of impediments to team's progress",
+      "Assigning tasks cho từng Developer",
+      "Approving technical decisions"
+    ],
+    ans: [0, 1, 2],
+    explain: "SM coaches self-management, helps focus on DoD Increments, removes impediments. NEVER assigns tasks or approves tech decisions."
+  },
+  {
+    q: "Scrum Master serves Product Owner bằng những cách nào? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Helping find techniques for effective Product Goal definition and PB management",
+      "Helping establish empirical product planning for complex environment",
+      "Facilitating stakeholder collaboration as requested or needed",
+      "Writing Product Backlog Items cho PO",
+      "Making ordering decisions thay PO"
+    ],
+    ans: [0, 1, 2],
+    explain: "SM helps PO with techniques, empirical planning, stakeholder facilitation. Never writes PBIs or makes ordering decisions for PO."
+  },
+  {
+    q: "Sprint Backlog bao gồm những gì? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Sprint Goal (why)",
+      "Set of Product Backlog Items selected for Sprint (what)",
+      "Actionable plan for delivering Increment (how)",
+      "Product Goal",
+      "Definition of Done"
+    ],
+    ans: [0, 1, 2],
+    explain: "Sprint Backlog = Sprint Goal + selected PBIs + plan. Product Goal belongs to PB. DoD is commitment for Increment."
+  },
+  {
+    q: "Trong Sprint, điều gì đúng? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "No changes are made that would endanger the Sprint Goal",
+      "Quality does not decrease",
+      "Product Backlog is refined as needed",
+      "Scope may be clarified and re-negotiated with PO as more is learned",
+      "Sprint Goal có thể thay đổi nếu PO đồng ý"
+    ],
+    ans: [0, 1, 2, 3],
+    explain: "During Sprint: Goal protected, quality maintained, PB refined, scope negotiable. Sprint Goal CANNOT change mid-Sprint."
+  },
+  {
+    q: "Scrum Values bao gồm? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Commitment",
+      "Courage",
+      "Focus",
+      "Openness",
+      "Respect",
+      "Trust",
+      "Transparency"
+    ],
+    ans: [0, 1, 2, 3, 4],
+    explain: "5 Scrum Values: Commitment, Courage, Focus, Openness, Respect. Trust/Transparency are NOT Scrum values (pillars ≠ values)."
+  },
+  {
+    q: "Events nào là formal opportunities to inspect and adapt? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective",
+      "Product Backlog Refinement"
+    ],
+    ans: [0, 1, 2, 3],
+    explain: "4 formal events within Sprint are inspect-and-adapt opportunities. Refinement is an ongoing activity, NOT a formal event."
+  },
+  {
+    q: "Về Increment, điều gì đúng? (chọn tất cả đúng)",
+    multi: true,
+    opts: [
+      "Must meet Definition of Done",
+      "Must be usable",
+      "Multiple Increments may be created within a Sprint",
+      "Can be delivered to stakeholders prior to Sprint Review",
+      "Chỉ được release tại Sprint Review"
+    ],
+    ans: [0, 1, 2, 3],
+    explain: "Increment meets DoD, is usable, multiple per Sprint possible, can deliver anytime. Sprint Review is NOT a release gate."
+  },
+
+  // ==================== MORE RECALL QUESTIONS ====================
+
+  {
+    q: "Ai quyết định Developers how to form teams trong scaled Scrum?",
+    opts: ["Developers themselves", "Management", "Scrum Master", "Product Owner"],
+    ans: 0,
+    explain: "Developers themselves decide how to organize and form teams."
+  },
+  {
+    q: "Sprint Review có phải gate to release không?",
+    opts: ["KHÔNG — Sprint Review should never be considered a gate to releasing value", "Có — phải qua Review mới release", "Tuỳ PO quyết định", "Tuỳ organization"],
+    ans: 0,
+    explain: "Sprint Review is NOT a gate. Value can be delivered at any time during or after Sprint."
+  },
+  {
+    q: "Developers thay đổi members giữa Sprint — hệ quả?",
+    opts: ["Possible nhưng may cause short-term reduction in productivity", "Không được phép thay đổi", "Chỉ SM approve được", "Không ảnh hưởng gì"],
+    ans: 0,
+    explain: "Composition can change but expect short-term productivity reduction as team reforms."
+  },
+  {
+    q: "Velocity trong Scrum dùng cho mục đích gì?",
+    opts: ["Internal forecasting tool cho Developers — NOT performance measurement", "Measure team performance cho management", "So sánh giữa các teams", "PO dùng để plan release date"],
+    ans: 0,
+    explain: "Velocity is Developers' internal forecasting tool. Never used to compare teams or measure performance."
+  },
+  {
+    q: "Purpose of Sprint?",
+    opts: ["Create valuable, useful Increment — Sprints enable predictability via inspect & adapt toward Product Goal", "Deliver hết Sprint Backlog", "Maximize velocity", "Complete all PBIs committed"],
+    ans: 0,
+    explain: "Sprint purpose: create value, enable predictability, inspect/adapt toward Product Goal. Not about completing everything."
+  },
+  {
+    q: "DoD có thể thay đổi giữa Sprint không?",
+    opts: ["KHÔNG — DoD should not change mid-Sprint; can be improved at Retrospective", "Có bất cứ lúc nào", "Chỉ PO thay đổi", "Chỉ SM thay đổi"],
+    ans: 0,
+    explain: "DoD doesn't change mid-Sprint. Improvement happens at Retrospective for subsequent Sprints."
+  },
+  {
+    q: "Sustainable pace trong Agile/Scrum?",
+    opts: ["Team should maintain sustainable pace — increases long-term productivity and quality", "Sprint faster mỗi Sprint", "Maximize overtime khi cần", "Chỉ là nice-to-have"],
+    ans: 0,
+    explain: "Sustainable pace is fundamental. Overwork decreases quality and long-term productivity."
   },
   {
     q: "First Sprint trong project?",
-    opts: ["Results in potentially releasable Increment, same as all Sprints", "Only for setup/architecture", "No Increment expected", "Used to finalize project plan"],
+    opts: ["Must result in usable Increment, same as all Sprints — no Sprint Zero", "Chỉ cho setup/architecture", "Không cần Increment", "Used to finalize project plan"],
     ans: 0,
-    explain: "First Sprint results in potentially releasable Increment. At least one piece of functionality developed."
-  },
-  {
-    q: "Scrum framework?",
-    opts: ["Immutable — exists only in its entirety", "Can be partially implemented", "Flexible to remove events", "Adjustable per team"],
-    ans: 0,
-    explain: "Scrum framework is immutable. Implementing parts = result is NOT Scrum."
-  },
-  {
-    q: "Daily Scrum improves?",
-    opts: ["Communication, identifies impediments, promotes quick decision-making", "Documentation", "Code quality", "Stakeholder visibility"],
-    ans: 0,
-    explain: "Daily Scrum improves communications, identifies impediments, promotes quick decision-making."
+    explain: "Every Sprint, including the first, must produce usable Increment. No Sprint Zero concept in Scrum."
   },
 ];
